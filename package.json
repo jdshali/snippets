@@ -1,9 +1,9 @@
 {
-	"name": "vscode-test-extension",
-	"displayName": "vscode-test-extension",
-	"description": "An awesome vscode extension",
+	"name": "vscode-lls-extension",
+	"displayName": "vscode-lls-extension",
+	"description": "lls vscode extension",
 	"version": "0.0.1",
-	"publisher": "Chenmenglan",
+	"publisher": "zhaoshali@linlogis.com",
 	"engines": {
 		"vscode": "^1.12.0"
 	},
