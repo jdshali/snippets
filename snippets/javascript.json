@@ -27,16 +27,42 @@
     "description": "Code snippet for 'setTimeout'"
   },
   "httppost":{
-    "prefix": "hpost",
+    "prefix": "llspost",
     "body":[
-      "this.$http.post(`${1:}`).then(",
-        "(res) => {",
-          "\t${2:// body}",
-        "},",
-        "(err) => {}",
-          
-        ");"
+      "this.layerLoading = true;",
+      "this.http.post(`${0}`).then(",
+      "    (res) => {",
+      "        this.layerLoading = false;",
+      "        if(res.data.code === '200'){",
+      "            ${1://body}",
+      "        }else{",
+      "            this.llsMessage({",
+      "                type: \"error\",",
+      "                text: res.data.message",
+      "             });",
+      "         }",
+      "    },",
+      "    (err) => {",
+      "        ${2://err}",
+      "    }",
+      ");"
     ],
-    "description": "snippet for 'http.post'"
+    "description": "snippet for post"
+  },
+  "template": {
+    "prefix": "template",
+    "body": [
+      "for (let key in item) {",
+      "    let tempObj = item[key];",
+      "    if (",
+      "        tempObj &&",
+      "        typeof tempObj == \"string\" &&",
+      "        tempObj.indexOf(\"dictParam\") > -1",
+      "    ) {",
+      "        item[key] = JSON.parse(tempObj || \"{}\").dictParam;",
+      "    }",
+      "}"
+    ],
+    "description":"snippet for template"
   }
 }

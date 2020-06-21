@@ -28,6 +28,14 @@
 				"path": "./snippets/javascript.json"
 			},
 			{
+				"language": "css",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/scss.json"
+			},
+			{
 				"language": "typescript",
 				"path": "./snippets/javascript.json"
 			},
